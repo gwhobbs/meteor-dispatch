@@ -19,7 +19,7 @@ Npm.depends({
 Package.onUse(function(api) {
   api.versionsFrom('1.3.4.1');
   api.use('ecmascript');
-  api.mainModule('dispatch.js', 'server');
+  api.mainModule('dispatch.js');
 });
 
 Package.onTest(function(api) {

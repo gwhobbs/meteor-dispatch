@@ -16,6 +16,8 @@ export const Dispatch = {
   }
 };
 
+const emptyImplementation = () => {};
+
 export class Action {
   constructor(name) {
     this.name = name;
@@ -25,11 +27,12 @@ export class Action {
     return Object.keys(this.implementations);
   }
   registerImplementation(serviceName, implementation) {
-    this.implementations[serviceName] = implementation;
+    this.implementations[serviceName] = implementation || emptyImplementation;
+    // on the client, may wish to provide empty implementation
   }
   compatibleImplementationForUser(user) {
     const implementationNames = intersection(
-      Object.keys(user.services),
+      Object.keys(user.services || {}),
       this.supportedServices()
     );
     if (implementationNames && implementationNames.length) {
@@ -47,6 +50,6 @@ export class Action {
       throw new Meteor.Error('dispatch.no-implementation',
         'There is no registered implementation that is available for this user');
     }
-    return implementation(args);
+    return implementation(user, args);
   }
 }
