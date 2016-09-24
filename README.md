@@ -4,8 +4,7 @@ a Meteor user has linked to his account__
 
 ## Getting started
 
-This package is not on Atmosphere. To add the package, clone it into the `packages`
-directory before adding with
+To add the package, run:
 
 ```
 meteor add ghobbs:dispatch
