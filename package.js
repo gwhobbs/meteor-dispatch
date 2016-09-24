@@ -2,8 +2,8 @@ Package.describe({
   name: 'ghobbs:dispatch',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: 'A unified interface for calling APIs that chooses an API\
-  based on what services the user has linked to his Meteor user account.',
+  summary: 'A unified interface for calling APIs\
+  based on the services linked to a user\'s account.',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/gwhobbs/dispatch',
   // By default, Meteor will default to using README.md for documentation.
