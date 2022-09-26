@@ -47,8 +47,8 @@ export class Action {
   do(user, args) {
     const implementation = this.compatibleImplementationForUser(user);
     if (!implementation) {
-      throw new Meteor.Error('dispatch.no-implementation',
-        'There is no registered implementation that is available for this user');
+      console.log('There is no registered implementation that is available for this user');
+      return () => {};
     }
     return implementation(user, args);
   }

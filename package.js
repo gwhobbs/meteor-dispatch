@@ -1,6 +1,6 @@
 Package.describe({
   name: 'ghobbs:dispatch',
-  version: '0.0.1',
+  version: '0.0.2',
   // Brief, one-line summary of the package.
   summary: 'A unified interface for calling APIs\
   based on the services linked to a user\'s account.',
